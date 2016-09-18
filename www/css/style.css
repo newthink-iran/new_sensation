@@ -396,8 +396,8 @@ p{
     float: none !important;
     display: block !important;
     margin:auto !important;
-    pointer-events: none !important;
-    cursor: default !important;
+    /*pointer-events: none !important;
+    cursor: default !important;*/
     margin-bottom: 10px !important;
 }
 
