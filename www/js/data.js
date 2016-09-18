@@ -15,7 +15,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/products.png',
-            page: 'products.html'
+            page: 'products1.html'
         },
         { 
             title: '',
@@ -410,7 +410,23 @@ sensationApp.factory('FeedPluginData', function(){
 // RSS Data: Mofid Feeds configuration
 sensationApp.factory('FeedData_mofid', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=5' };
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=10' };
+    
+    return data;
+});
+
+// RSS Data: Fom Feeds configuration
+sensationApp.factory('FeedData_fom', function(){
+    
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=10' };
+    
+    return data;
+});
+
+// RSS Data: Products1 Feeds configuration
+sensationApp.factory('FeedData_products1', function(){
+    
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=7' };
     
     return data;
 });

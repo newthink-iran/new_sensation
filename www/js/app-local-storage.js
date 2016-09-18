@@ -36,3 +36,39 @@ angular.module('appLocalStorage', [])
     }
   }
 })
+
+.factory('FeedStorage_fom', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_fom'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_fom'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_fom');
+    }
+  }
+})
+
+.factory('FeedStorage_products1', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_products1'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_products1'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_products1');
+    }
+  }
+})

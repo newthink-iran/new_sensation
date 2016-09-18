@@ -1,0 +1,19 @@
+<ons-page ng-controller="FomController">
+    
+
+    <ons-toolbar fixed-style>
+        <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    </ons-toolbar>
+    
+    <div data-role="header" style="width:100%;top:0;text-align:right;">
+            <img src="img/top.png"/>
+    </div> 
+    
+      <section style="padding:0 10px;direction:rtl;">
+    
+        <h2 class="title" ng-bind-html="item.title" style="text-align:center;"></h2>
+        <p ng-bind-html="content" style="text-align:center;" class="my-content"></p>
+        
+    </section> 
+    
+</ons-page>
