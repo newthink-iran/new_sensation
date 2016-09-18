@@ -5,18 +5,11 @@
     <description>
     یک کاتالوگ خوب و عالی
     </description>
+	
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
     
     <content src="index.html" />
     <access origin="*" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    
-    <preference name="BackupWebStorage" value="none" />
-
-    <feature name="StatusBar">
-        <param name="ios-package" value="CDVStatusBar" onload="true" />
-    </feature>
 	
 	<gap:platform name="android">
         <allow-intent href="market:*" />
@@ -29,7 +22,16 @@
         <access origin="*" />
     </gap:platform>
 	
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    
+    <preference name="BackupWebStorage" value="none" />
+
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+	
 
 	
     
