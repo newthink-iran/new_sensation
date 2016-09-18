@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.sensation" version="1.15.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Sensation</name>
+    <name>کاتالوگ نمایشگاهی</name>
 
     <description>
-    Sensation is a PhoneGap/Cordova Full Hybrid App with AngularJS + Onsen UI.
+    یک کاتالوگ خوب و عالی
     </description>
     
     <content src="index.html" />
@@ -17,5 +17,24 @@
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
+	
+	<gap:platform name="android">
+        <allow-intent href="market:*" />
+        <access origin="*" />
+    </gap:platform>
+    
+	<gap:platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <access origin="*" />
+    </gap:platform>
+	
+	<access origin="tel:*" launch-external="yes"/>
+	<access origin="sms:*" launch-external="yes"/>
+	<access origin="geo:*" launch-external="yes"/>
+	<access origin="http://*" launch-external="yes"/>
+	<access origin="https://*" launch-external="yes"/>
+
+	
     
 </widget>
