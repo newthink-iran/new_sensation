@@ -29,11 +29,7 @@
         <access origin="*" />
     </gap:platform>
 	
-	<access origin="tel:*" launch-external="yes"/>
-	<access origin="sms:*" launch-external="yes"/>
-	<access origin="geo:*" launch-external="yes"/>
-	<access origin="http://*" launch-external="yes"/>
-	<access origin="https://*" launch-external="yes"/>
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
 	
     
