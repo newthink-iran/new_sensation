@@ -360,7 +360,6 @@ audio { margin-top:10px; }
   font-style: normal;
 }
 
-
 .list__header{
 	text-align: right !important;
 	padding: 0 10px 0 10px !important;
@@ -378,24 +377,12 @@ audio { margin-top:10px; }
     display: none !important;
 }
 
-/*
+
 .page__background {   
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 4px, transparent 4px, transparent 100%);
-    -webkit-background-size: 20px 20px;
-    -moz-background-size: 20px 20px;
-    background-size: 20px 20px;
     
     background-color: rgb(255, 255, 255) !important;
 }
-*/
 
-body{
-	background-image: url("img/preview1.png") no-repeat;
-	background-size: 100%;
-}
 
 
 .grid-menu-item, .grid-menu-item1, .grid-menu-item.list__item { border:none!important; background-image:none; }
@@ -403,4 +390,52 @@ body{
 
 p{
     margin-top:0 !important;
+}
+
+.my-content img{
+    float: none !important;
+    display: block !important;
+    margin:auto !important;
+    pointer-events: none !important;
+    cursor: default !important;
+    margin-bottom: 10px !important;
+}
+
+.my-content > p{
+    display: none !important;
+}
+
+.my-content a{
+    /*pointer-events: none !important;
+    cursor: default !important;*/
+}
+
+.ons-row-inner{
+    margin-bottom: -5px !important;
+}
+
+input , textarea{
+    border-color: #019795 !important;
+    background: #ffffff !important;
+}
+
+
+.item-title, .col.ons-col-inner.ng-binding , .title{
+    color: #014b60;
+}
+
+.ons-icon, .fa-chevron-circle-left{
+    color: #510476;
+}
+
+.list__item , .navigation-bar{
+    border-bottom: 1px solid #510476 !important;
+}
+
+.list{
+     border-top: 1px solid #510476 !important;
+}
+
+img{
+    border-radius: 5px !important;
 }
