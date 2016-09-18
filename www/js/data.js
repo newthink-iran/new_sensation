@@ -430,3 +430,27 @@ sensationApp.factory('FeedData_products1', function(){
     
     return data;
 });
+
+// RSS Data: Darbare Feeds configuration
+sensationApp.factory('FeedData_darbare', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=24' };
+    
+    return data;
+});
+
+// RSS Data: Gallery Feeds configuration
+sensationApp.factory('FeedData_gallery', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=25' };
+    
+    return data;
+});
+
+// RSS Data: Certs Feeds configuration
+sensationApp.factory('FeedData_certs', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=28' };
+    
+    return data;
+});

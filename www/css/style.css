@@ -380,7 +380,8 @@ audio { margin-top:10px; }
 
 .page__background {   
     
-    background-color: rgb(255, 255, 255) !important;
+    /*background-color: rgb(255, 255, 255) !important;*/
+      background: url(/img/back.jpg) repeat center center fixed;
 }
 
 
@@ -401,7 +402,7 @@ p{
     margin-bottom: 10px !important;
 }
 
-.my-content > p{
+.my-content > p:last-child{
     display: none !important;
 }
 

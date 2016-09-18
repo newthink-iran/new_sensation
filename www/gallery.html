@@ -1,17 +1,23 @@
-<ons-page ng-controller="GalleryController" sliding-menu-ignore="true" class="gallery-page">
+<ons-page ng-controller="GalleryRssController" sliding-menu-ignore="true" class="gallery-page">
 
-    <ons-toolbar>
-    <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">Gallery</div>
-    </ons-toolbar>
         
+    <ons-toolbar fixed-style>
+        <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
+    </ons-toolbar>
+    
+    <div data-role="header" style="width:100%;top:0;text-align:right;">
+            <div><img src="img/top.png" style="width:20%"/></div>
+            <div><img src="img/contact1.png"  style="width:20%"/></div>
+    </div> 
+    
+    
     <ul rn-carousel rn-carousel-indicator>
-        <li ng-repeat="slide in slides">
-        <img ng-src="{{slide.picture}}"/>
-        <div class="content">
-        <div><ons-icon icon="info" fixed-width="true"></ons-icon>{{slide.label}} ({{slide.item}}/{{slides.length}})</div>
-        <div><ons-icon icon="map-marker" fixed-width="true"></ons-icon>{{slide.location}}</div>
-        </div>
+        <li ng-repeat="feed in feeds">
+            <img ng-src="{{getImage($index)}}"/>
+            <div class="content" style="text-align:center;">
+                <!--<ons-icon icon="info" fixed-width="true"></ons-icon>{{feed.title}}-->
+                <!--<p class="title" ng-bind-html="feed.title"></p>-->
+            </div>
         </li>
     </ul>
     
