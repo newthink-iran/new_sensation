@@ -1174,6 +1174,84 @@ var app = {
           };
           return filter;
         });
+    
+    // RSS: Mofids Controller
+    app.controller('MofidsController', function($scope, $http, FeedData_mofid, FeedStorage_mofid) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
+            FeedData_mofid.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_mofid.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_mofid.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_mofid.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_mofid.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_mofid.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('Mofid.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+    // RSS: Mofid Controller
+    app.controller('MofidController', function($scope, FeedData_mofid, $sce) {
+        $scope.item = FeedData_mofid.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
 
 
 })();

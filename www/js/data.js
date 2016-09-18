@@ -4,83 +4,62 @@ var sensationApp = angular.module('sensationApp');
 sensationApp.factory('Data', function(){
     var data = {};
     
-    data.items = [
+        data.items = [
         { 
-            title: 'News',
-            icon: 'calendar',
+            title: '',
+            icon: '',
+            image: 'img/news.png',
             page: 'news.html'
         },
         { 
-            title: 'Products',
-            icon: 'shopping-cart',
+            title: '',
+            icon: '',
+            image: 'img/products.png',
             page: 'products.html'
         },
         { 
-            title: 'Gallery',
-            icon: 'camera',
-            page: 'gallery.html'
-        },
-        { 
-            title: 'Map',
-            icon: 'map-marker',
-            page: 'map.html'
-        },
-        { 
-            title: 'About Us',
-            icon: 'user',
+            title: '',
+            icon: '',
+            image: 'img/about.png',
             page: 'about.html'
         },
         { 
-            title: 'Contact',
-            icon: 'envelope-o',
+            title: '',
+            icon: '',
+            image: 'img/edu.png',
+            page: 'takhfifs.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/services.png',
+            page: 'Services.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/gallery.png',
+            page: 'gallery.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/useful.png',
+            page: 'mofids.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/certs.png',
+            page: 'certs.html'
+        },
+        { 
+            title: '',
+            icon: '',
+            image: 'img/contact.png',
             page: 'contact.html'
         },
-        { 
-            title: 'WP JSON',
-            icon: 'code-fork',
-            page: 'posts.html'
-        },
-        { 
-            title: 'Pagination',
-            icon: 'sort-numeric-asc',
-            page: 'serverposts.html'
-        },
-        { 
-            title: 'Categories',
-            icon: 'tags',
-            page: 'categories.html'
-        },
-        { 
-            title: 'Search News',
-            icon: 'search',
-            page: 'news-search.html'
-        },
-        { 
-            title: 'Chart',
-            icon: 'bar-chart-o',
-            page: 'discretebar-chart.html'
-        },
-        { 
-            title: 'RSS',
-            icon: 'rss',
-            page: 'feeds.html'
-        },
-        { 
-            title: 'Tab-Bar',
-            icon: 'columns',
-            page: 'tab-bar.html'
-        },
-        { 
-            title: 'Elements',
-            icon: 'code',
-            page: 'elements.html'
-        },
-        { 
-            title: 'Feed API',
-            icon: 'rss-square',
-            page: 'feed-categories.html'
-        }
-
+       
     ]; 
     
     return data;
@@ -424,6 +403,14 @@ sensationApp.factory('FeedData', function(){
 sensationApp.factory('FeedPluginData', function(){
     
     var data = { url: 'json/structure.json' };
+    
+    return data;
+});
+
+// RSS Data: Mofid Feeds configuration
+sensationApp.factory('FeedData_mofid', function(){
+    
+    var data = { url: 'http://mehregansang.com/feed/?cat=5' };
     
     return data;
 });
