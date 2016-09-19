@@ -37,12 +37,12 @@ var app = {
         app.receivedEvent('deviceready');
         
         ons.setDefaultDeviceBackButtonListener(function() {
-            if (navigator.notification.confirm("Are you sure to close the app?", 
+            /*if (navigator.notification.confirm("Are you sure to close the app?", 
                 function(index) {
-                    if (index == 1) { // OK button
+                    if (index == 1) {*/ // OK button
                         navigator.app.exitApp(); // Close the app
-                    }
-                }
+                    /*}
+                }*/
             ));
         });
 
