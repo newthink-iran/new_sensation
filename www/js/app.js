@@ -42,8 +42,8 @@ var app = {
                     if (index == 1) {*/ // OK button
                         navigator.app.exitApp(); // Close the app
                     /*}
-                }*/
-            ));
+                }
+            ));*/
         });
 
         // Open any external link with InAppBrowser Plugin
