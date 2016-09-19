@@ -5,19 +5,19 @@
     <description>
     </description>
 	
-	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+	<plugin name="com.phonegap.plugins.barcodescanner" />
 	<plugin name="cordova-plugin-whitelist" />
 	<!--<plugin name="de.appplant.cordova.plugin.email-composer" source="pgb" spec="0.8.2" />-->
     <gap:plugin name="cordova-plugin-email-composer" source="npm" />
-	<gap:plugin name="org.apache.cordova.device"  />
-	<gap:plugin name="org.apache.cordova.device-motion"  />
-	<gap:plugin name="org.apache.cordova.device-orientation"  />
+	<plugin name="org.apache.cordova.device"  />
+	<plugin name="org.apache.cordova.device-motion"  />
+	<plugin name="org.apache.cordova.device-orientation"  />
 	<plugin name="org.apache.cordova.dialogs"  />
 	<plugin name="org.apache.cordova.geolocation"  />
 	<plugin name="org.apache.cordova.inappbrowser"  />
-	<gap:plugin name="org.apache.cordova.vibration" />
+	<plugin name="org.apache.cordova.vibration" />
     <!--<gap:plugin name="nl.x-services.plugins.socialsharing" />-->
-    <gap:plugin name="org.apache.cordova.splashscreen"/>
+    <plugin name="org.apache.cordova.splashscreen"/>
 
     
     <content src="index.html" />
