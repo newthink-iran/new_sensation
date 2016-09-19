@@ -13,7 +13,7 @@
 	<gap:plugin name="org.apache.cordova.device-motion"  />
 	<gap:plugin name="org.apache.cordova.device-orientation"  />
 	<plugin name="org.apache.cordova.dialogs"  />
-	<gap:plugin name="org.apache.cordova.geolocation"  />
+	<plugin name="org.apache.cordova.geolocation"  />
 	<plugin name="org.apache.cordova.inappbrowser"  />
 	<gap:plugin name="org.apache.cordova.vibration" />
     <!--<gap:plugin name="nl.x-services.plugins.socialsharing" />-->
