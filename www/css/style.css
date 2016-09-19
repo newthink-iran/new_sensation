@@ -381,7 +381,7 @@ audio { margin-top:10px; }
 .page__background {   
     
     /*background-color: rgb(255, 255, 255) !important;*/
-      background: url(/img/back.jpg) repeat center center fixed;
+    /*background: url(/img/back.jpg) repeat center center fixed;*/
 }
 
 

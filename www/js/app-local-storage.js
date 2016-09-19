@@ -108,3 +108,21 @@ angular.module('appLocalStorage', [])
     }
   }
 })
+
+.factory('FeedStorage_certs', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_certs'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_certs'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_certs');
+    }
+  }
+})

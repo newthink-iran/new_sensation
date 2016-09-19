@@ -434,7 +434,7 @@ sensationApp.factory('FeedData_products1', function(){
 // RSS Data: Darbare Feeds configuration
 sensationApp.factory('FeedData_darbare', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=24' };
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=24' };
     
     return data;
 });
@@ -442,7 +442,7 @@ sensationApp.factory('FeedData_darbare', function(){
 // RSS Data: Gallery Feeds configuration
 sensationApp.factory('FeedData_gallery', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=25' };
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=15' };
     
     return data;
 });
@@ -450,7 +450,7 @@ sensationApp.factory('FeedData_gallery', function(){
 // RSS Data: Certs Feeds configuration
 sensationApp.factory('FeedData_certs', function(){
     
-    var data = { url: 'http://mehregansang.com/feed/?cat=28' };
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=17' };
     
     return data;
 });
