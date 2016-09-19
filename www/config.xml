@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.sensation" version="1.15.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>کاتالوگ نمایشگاهی</name>
+<widget id="com.newthink24.atashbas" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>آتش بس</name>
 
     <description>
-    یک کاتالوگ خوب و عالی
     </description>
 	
 	<plugin name="com.phonegap.plugins.barcodescanner" source="pgb" spec="2.2.0" />
@@ -26,36 +25,35 @@
         <access origin="*" />
     </gap:platform>
     
-    <!--
 	<gap:platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <access origin="*" />
     </gap:platform>
-	-->
     
     <preference name="SplashScreen" value="screen"/>
     <preference name="SplashScreenDelay" value="3000"/>
     
     <gap:splash src="splash.png"/>
-	<gap:splash src="res/screen/android/screen-ldpi-landscape.png" gap:platform="android" gap:qualifier="land-ldpi" />
+	<!--<gap:splash src="res/screen/android/screen-ldpi-landscape.png" gap:platform="android" gap:qualifier="land-ldpi" />
 	<gap:splash src="res/screen/android/screen-mdpi-landscape.png" gap:platform="android" gap:qualifier="land-mdpi" />
 	<gap:splash src="res/screen/android/screen-hdpi-landscape.png" gap:platform="android" gap:qualifier="land-hdpi" />
-	<gap:splash src="res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:qualifier="land-xhdpi" />
-	<gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi" />
-	<gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi" />
-	<gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi" />
-	<gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi" />
+	<gap:splash src="res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:qualifier="land-xhdpi" />-->
+	<gap:splash src="res/screen/android/screen-ldpi-portrait.jpg" gap:platform="android" gap:qualifier="port-ldpi" />
+	<gap:splash src="res/screen/android/screen-mdpi-portrait.jpg" gap:platform="android" gap:qualifier="port-mdpi" />
+	<gap:splash src="res/screen/android/screen-hdpi-portrait.jpg" gap:platform="android" gap:qualifier="port-hdpi" />
+	<gap:splash src="res/screen/android/screen-xhdpi-portrait.jpg" gap:platform="android" gap:qualifier="port-xhdpi" />
+    <gap:splash src="res/screen/android/screen-xxhdpi-portrait.jpg" gap:platform="android" gap:qualifier="port-xxhdpi" />
     
     <gap:platform name="ios">
-        <splash src="res/screen/ios/screen-iphone-portrait.png" width="320" height="480"/>
-        <splash src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" height="960"/>
-        <splash src="res/screen/ios/screen-ipad-portrait.png" width="768" height="1004"/>>
-        <splash src="res/screen/ios/screen-ipad-landscape.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="1280" height="750"/>
-        <splash src="res/screen/ios/screen-ipad-portrait-2x.png" width="1280" height="1920"/>
-        <splash src="res/screen/ios/screen-iphone-landscape-2x.png" width="1024" height="748"/>
-        <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/screen-iphone-portrait.jpg" width="320" height="480"/>
+        <splash src="res/screen/ios/screen-iphone-portrait-2x.jpg" width="640" height="960"/>
+        <splash src="res/screen/ios/screen-ipad-portrait.jpg" width="768" height="1004"/>>
+        <!--<splash src="res/screen/ios/screen-ipad-landscape.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="1280" height="750"/>-->
+        <splash src="res/screen/ios/screen-ipad-portrait-2x.jpg" width="1280" height="1920"/>
+        <!--<splash src="res/screen/ios/screen-iphone-landscape-2x.png" width="1024" height="748"/>-->
+        <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.jpg" width="640" height="1136"/>
     </gap:platform>
     
     <icon src="icon.png"/>

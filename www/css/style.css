@@ -36,7 +36,7 @@
 }
 
 *, .navigation-bar, input, .text-input, .textarea, input[type=email], input[type=password], .button, .button--quiet, .search-input, .modal__content {
-  font-family: 'sans','Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  font-family: 'sans'/*,'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif*/;
 }
 
 .subtitle { margin:0 0 10px 0; font-size:14px }
