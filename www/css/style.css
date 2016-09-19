@@ -381,7 +381,8 @@ audio { margin-top:10px; }
 .page__background {   
     
     /*background-color: rgb(255, 255, 255) !important;*/
-    /*background: url(/img/back.jpg) repeat center center fixed;*/
+    background-image: url('back.jpg') !important;
+    background-repeat: repeat !important;
 }
 
 
@@ -435,6 +436,7 @@ input , textarea{
 
 .list{
      border-top: 1px solid #510476 !important;
+    background-color: transparent !important;
 }
 
 img{
