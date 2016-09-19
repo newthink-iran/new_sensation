@@ -1253,6 +1253,240 @@ var app = {
         
      });
     
+     // RSS: Khadamats Controller
+    app.controller('KhadamatsController', function($scope, $http, FeedData_khadamat, FeedStorage_khadamat) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
+            FeedData_mofid.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_khadamat.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_khadamat.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_khadamat.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_khadamat.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_khadamat.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('khadamat.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+    // RSS: Khadamat Controller
+    app.controller('KhadamatController', function($scope, FeedData_khadamat, $sce) {
+        $scope.item = FeedData_khadamat.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
+     // RSS: Amozeshes Controller
+    app.controller('AmozeshesController', function($scope, $http, FeedData_amozesh, FeedStorage_amozesh) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
+            FeedData_mofid.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_amozesh.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_amozesh.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_amozesh.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_amozesh.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_amozesh.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('amozesh.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+    // RSS: amozesh Controller
+    app.controller('AmozeshController', function($scope, FeedData_amozesh, $sce) {
+        $scope.item = FeedData_amozesh.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
+     // RSS: Akhbar Controller
+    app.controller('AkhbarController', function($scope, $http, FeedData_akhbar, FeedStorage_akhbar) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
+            FeedData_mofid.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_akhbar.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_akhbar.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_akhbar.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_akhbar.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('khabar.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+    // RSS: khabar Controller
+    app.controller('KhabarController', function($scope, FeedData_akhbar, $sce) {
+        $scope.item = FeedData_akhbar.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
      // RSS: Foms Controller
     app.controller('FomsController', function($scope, $http, FeedData_fom, FeedStorage_fom) {
         
@@ -1331,6 +1565,84 @@ var app = {
         
      });
     
+     // RSS: Kafsazes Controller
+    app.controller('KafsazesController', function($scope, $http, FeedData_kafsaz, FeedStorage_kafsaz) {
+        
+        $scope.feeds = "";
+        
+        var getData = function ($done) {
+            
+            //add datetime for refreshing google api
+            /*var randomNum = Math.floor(Date.now() / 1000);
+            var newURL = "";
+            newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
+            FeedData_mofid.url = newURL;*/
+
+            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_kafsaz.url)}).
+            success(function(data, status, headers, config) {
+
+                if ($done) { $done(); }
+
+                if (!data.responseData) {
+                    $scope.data = FeedStorage_kafsaz.get();
+                    $scope.feeds = $scope.data.feed.entries;
+                    
+                } else {
+                    $scope.feeds = data.responseData.feed.entries;
+                    // Save feeds to the local storage
+                    //FeedStorage_akhbar.clear();
+                    FeedStorage_kafsaz.save(data.responseData);
+                }
+
+            }).
+            error(function(data, status, headers, config) {
+
+            if ($done) { $done(); }
+
+            $scope.data = FeedStorage_kafsaz.get();
+            $scope.feeds = $scope.data.feed.entries; 
+            });
+        }
+        
+        // Initial Data Loading
+        getData();
+
+        $scope.load = function($done) {
+            getData($done);
+        };
+        
+        $scope.showDetail = function(index) {
+        var selectedItem = $scope.feeds[index];
+        FeedData_kafsaz.selectedItem = selectedItem;
+        $scope.appNavigator.pushPage('kafsaz.html', selectedItem);
+        }
+
+        $scope.getImage = function(index) {
+        var selectedItem = $scope.feeds[index];
+        var content = selectedItem.content;
+        var element = $('<div>').html(content);
+        var source = element.find('img').attr("src");
+        return source;
+        }
+        
+    });
+    
+    // RSS: Fom Controller
+    app.controller('KafsazController', function($scope, FeedData_kafsaz, $sce) {
+        $scope.item = FeedData_kafsaz.selectedItem;
+        
+        $scope.content = $sce.trustAsHtml($scope.item.content);
+        
+        $scope.loadURL = function (url) {
+            //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
+            //_self: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the InAppBrowser.
+            //_blank: Opens in the InAppBrowser.
+            //_system: Opens in the system's web browser.
+            window.open(url,'_blank');
+        }
+        
+     });
+    
      // RSS: Products1 Controller
     app.controller('Products1Controller', function($scope, $http, FeedData_products1, FeedStorage_products1) {
         
@@ -1384,7 +1696,7 @@ var app = {
         if(index == 0)
             $scope.appNavigator.pushPage('foms.html', selectedItem);
         else if(index == 1)
-            $scope.appNavigator.pushPage('news.html', selectedItem);
+            $scope.appNavigator.pushPage('kafsazes.html', selectedItem);
         }
 
         $scope.getImage = function(index) {

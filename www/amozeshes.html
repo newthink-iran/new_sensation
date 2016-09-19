@@ -1,4 +1,4 @@
-<ons-page ng-controller="FomsController">
+<ons-page ng-controller="AmozeshesController">
     
     <ons-toolbar fixed-style>
         <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
@@ -6,20 +6,22 @@
 
    <div data-role="header" style="width:100%;top:0;text-align:right;">
         <div><img src="img/top.png" style="width:20%"/></div>
-        <div><img src="img/products1.png"  style="width:20%"/></div>
+        <div><img src="img/edu1.png"  style="width:20%"/></div>
     </div> 
         
         
     <div style="direction:rtl;">
-    <ons-list ng-controller="FomsController">
+    <ons-list ng-controller="AmozeshesController">
         <ons-list-item modifier="chevron" class="item" ng-repeat="item in feeds" ng-click="showDetail($index)">
             <ons-row>
                 <!--
                 <ons-col width="60px"> 
                 <div class="item-thum"><ons-icon icon="link"></ons-icon></div>
                 </ons-col>-->
-                <ons-col ng-if="getImage($index)" width="100%" height="auto" style="text-align:center;">
+                <ons-col ng-if="getImage($index)" width="60px" height="auto" style="margin-left: 10px;">
                 <img ng-src="{{getImage($index)}}" />
+                </ons-col>
+                <ons-col>
                 <header>
                 <span class="item-title" style="line-height:2;">{{item.title}}</span>
                 </header>

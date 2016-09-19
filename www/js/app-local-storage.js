@@ -37,6 +37,60 @@ angular.module('appLocalStorage', [])
   }
 })
 
+.factory('FeedStorage_akhbar', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_akhbar'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_akhbar'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_akhbar');
+    }
+  }
+})
+
+.factory('FeedStorage_khadamat', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_khadamat'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_khadamat'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_khadamat');
+    }
+  }
+})
+
+.factory('FeedStorage_amozesh', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_amozesh'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_amozesh'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_amozesh');
+    }
+  }
+})
+
 .factory('FeedStorage_fom', function() {
   return {
     get: function() {
@@ -51,6 +105,24 @@ angular.module('appLocalStorage', [])
     },
     clear: function() {
       window.localStorage.removeItem('feeds_fom');
+    }
+  }
+})
+
+.factory('FeedStorage_kafsaz', function() {
+  return {
+    get: function() {
+      var feeds = window.localStorage['feeds_kafsaz'];
+      if(feeds) {
+        return angular.fromJson(feeds);
+      }
+      return {};
+    },
+    save: function(feeds) {
+      window.localStorage['feeds_kafsaz'] = angular.toJson(feeds);
+    },
+    clear: function() {
+      window.localStorage.removeItem('feeds_kafsaz');
     }
   }
 })

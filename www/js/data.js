@@ -9,7 +9,7 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/news.png',
-            page: 'news.html'
+            page: 'akhbar.html'
         },
         { 
             title: '',
@@ -27,13 +27,13 @@ sensationApp.factory('Data', function(){
             title: '',
             icon: '',
             image: 'img/edu.png',
-            page: 'takhfifs.html'
+            page: 'amozeshes.html'
         },
         { 
             title: '',
             icon: '',
             image: 'img/services.png',
-            page: 'Services.html'
+            page: 'khadamats.html'
         },
         { 
             title: '',
@@ -415,10 +415,42 @@ sensationApp.factory('FeedData_mofid', function(){
     return data;
 });
 
+// RSS Data: khabar Feeds configuration
+sensationApp.factory('FeedData_akhbar', function(){
+    
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=11' };
+    
+    return data;
+});
+
+// RSS Data: Amozesh Feeds configuration
+sensationApp.factory('FeedData_amozesh', function(){
+    
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=12' };
+    
+    return data;
+});
+
+// RSS Data: Khadamat Feeds configuration
+sensationApp.factory('FeedData_khadamat', function(){
+    
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=13' };
+    
+    return data;
+});
+
 // RSS Data: Fom Feeds configuration
 sensationApp.factory('FeedData_fom', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=10' };
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=8' };
+    
+    return data;
+});
+
+// RSS Data: Kafsaz Feeds configuration
+sensationApp.factory('FeedData_kafsaz', function(){
+    
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=9' };
     
     return data;
 });
@@ -434,7 +466,7 @@ sensationApp.factory('FeedData_products1', function(){
 // RSS Data: Darbare Feeds configuration
 sensationApp.factory('FeedData_darbare', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=24' };
+    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=14' };
     
     return data;
 });

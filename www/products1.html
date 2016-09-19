@@ -5,7 +5,8 @@
     </ons-toolbar>
 
    <div data-role="header" style="width:100%;top:0;text-align:right;">
-            <img src="img/top.png"/>
+        <div><img src="img/top.png" style="width:20%"/></div>
+        <div><img src="img/products1.png"  style="width:20%"/></div>
     </div> 
         
         
@@ -17,10 +18,8 @@
                 <ons-col width="60px"> 
                 <div class="item-thum"><ons-icon icon="link"></ons-icon></div>
                 </ons-col>-->
-                <ons-col ng-if="getImage($index)" width="60px" height="auto" style="margin-left: 10px;">
+                <ons-col ng-if="getImage($index)" width="100%" height="auto" style="text-align:center;">
                 <img ng-src="{{getImage($index)}}" />
-                </ons-col>
-                <ons-col>
                 <header>
                 <span class="item-title" style="line-height:2;">{{item.title}}</span>
                 </header>

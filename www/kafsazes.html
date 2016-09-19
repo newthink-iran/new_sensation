@@ -1,17 +1,17 @@
-<ons-page ng-controller="FomsController">
+<ons-page ng-controller="KafsazesController">
     
     <ons-toolbar fixed-style>
         <div class="right"><ons-back-button>بازگشت</ons-back-button></div>
     </ons-toolbar>
 
-   <div data-role="header" style="width:100%;top:0;text-align:right;">
+    <div data-role="header" style="width:100%;top:0;text-align:right;">
         <div><img src="img/top.png" style="width:20%"/></div>
         <div><img src="img/products1.png"  style="width:20%"/></div>
-    </div> 
+    </div>  
         
         
     <div style="direction:rtl;">
-    <ons-list ng-controller="FomsController">
+    <ons-list ng-controller="KafsazesController">
         <ons-list-item modifier="chevron" class="item" ng-repeat="item in feeds" ng-click="showDetail($index)">
             <ons-row>
                 <!--
