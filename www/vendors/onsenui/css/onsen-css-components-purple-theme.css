@@ -344,7 +344,7 @@ h6 {
   left: -1024px;
   width: 1024px;
   height: 2px;
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   content: '';
   margin: 0;
   padding: 0;
@@ -802,7 +802,7 @@ h6 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -818,7 +818,7 @@ h6 {
   transition: none;
 }
 .button:active {
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -844,17 +844,17 @@ h6 {
 */
 .button--outline {
   background-color: transparent;
-  border: 1px solid #8962ed;
-  color: #8962ed;
+  border: 1px solid #5b2c7a;
+  color: #5b2c7a;
 }
 .button--outline:active {
   background-color: rgba(137,98,237,0.2);
-  border: 1px solid #8962ed;
-  color: #8962ed;
+  border: 1px solid #5b2c7a;
+  color: #5b2c7a;
   opacity: 1;
 }
 .button--outline:hover {
-  border: 1px solid #8962ed;
+  border: 1px solid #5b2c7a;
   -webkit-transition: 0;
   -moz-transition: 0;
   -o-transition: 0;
@@ -923,7 +923,7 @@ h6 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -936,7 +936,7 @@ h6 {
   -webkit-box-shadow: none;
   box-shadow: none;
   background: transparent;
-  color: #8962ed;
+  color: #5b2c7a;
   border: none;
 }
 .button--quiet:disabled,
@@ -963,7 +963,7 @@ h6 {
   -o-transition: none;
   transition: none;
   opacity: 0.2;
-  color: #8962ed;
+  color: #5b2c7a;
 }
 /* topdoc
   name: Call To Action Button
@@ -1009,7 +1009,7 @@ h6 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1062,7 +1062,7 @@ h6 {
   text-align: center;
 }
 .button--large:active {
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -1131,7 +1131,7 @@ h6 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1149,7 +1149,7 @@ h6 {
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #8962ed;
+  color: #5b2c7a;
   text-align: center;
 }
 .button--large--quiet:active {
@@ -1158,7 +1158,7 @@ h6 {
   -o-transition: none;
   transition: none;
   opacity: 0.2;
-  color: #8962ed;
+  color: #5b2c7a;
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
@@ -1222,7 +1222,7 @@ h6 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: #8962ed;
+  background-color: #5b2c7a;
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1645,14 +1645,14 @@ h6 {
   color: #aaa;
 }
 :checked + .tab-bar__button {
-  color: #8962ed;
+  color: #5b2c7a;
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-top: none;
 }
 :checked + .tab-bar__button > .tab-bar__icon {
-  color: #8962ed;
+  color: #5b2c7a;
 }
 .tab-bar__button:disabled {
   opacity: 0.3;
@@ -1811,7 +1811,7 @@ h6 {
 }
 :checked + .tab-bar--top-border__button {
   background-color: transparent;
-  border-bottom: 4px solid #8962ed;
+  border-bottom: 4px solid #5b2c7a;
 }
 /* topdoc
   name: Notification
@@ -1894,7 +1894,7 @@ h6 {
   font-size: 17px;
   padding: 4px 10px;
   letter-spacing: 0;
-  color: #8962ed;
+  color: #5b2c7a;
   text-shadow: 0 1px none;
   vertical-align: baseline;
   background-color: rgba(0,0,0,0);
@@ -1943,7 +1943,7 @@ h6 {
   transition: none;
 }
 .toolbar-button--outline {
-  border: 1px solid #8962ed;
+  border: 1px solid #5b2c7a;
   margin: auto 8px;
   padding-left: 6px;
   padding-right: 6px;
@@ -2036,11 +2036,11 @@ h6 {
   width: 0;
 }
 .checkbox > input[type="checkbox"]:checked {
-  background: #8962ed;
+  background: #5b2c7a;
 }
 .checkbox > input[type="checkbox"]:checked + .checkbox__checkmark:before {
-  background: #8962ed;
-  border: 1px solid #8962ed;
+  background: #5b2c7a;
+  border: 1px solid #5b2c7a;
 }
 .checkbox > input[type="checkbox"]:checked + .checkbox__checkmark:after {
   opacity: 1;
@@ -2056,7 +2056,7 @@ h6 {
   width: 24px;
   height: 24px;
   background: transparent;
-  border: 1px solid #8962ed;
+  border: 1px solid #5b2c7a;
   -webkit-border-radius: 16px;
   border-radius: 16px;
   -webkit-box-shadow: none;
@@ -2265,7 +2265,7 @@ h6 {
   width: 12px;
   height: 6px;
   background: transparent;
-  border: 3px solid #8962ed;
+  border: 3px solid #5b2c7a;
   border-width: 2px;
   border-top: none;
   border-right: none;
@@ -2430,7 +2430,7 @@ h6 {
   width: 12px;
   height: 6px;
   background: transparent;
-  border: 3px solid #8962ed;
+  border: 3px solid #5b2c7a;
   border-width: 2px;
   border-top: none;
   border-right: none;

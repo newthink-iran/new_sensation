@@ -169,9 +169,9 @@ var app = {
         $scope.submitForm = function() {
             
             window.plugin.email.open({
-                to:      ['username@company.com'],
-                cc:      ['username1@company.com'],
-                bcc:     ['username2@company.com'],
+                to:      ['info@newthink24.com'],
+                cc:      ['info@newthink24.com'],
+                bcc:     ['info@newthink24.com'],
                 subject: $scope.subject,
                 body:    $scope.message
             });
