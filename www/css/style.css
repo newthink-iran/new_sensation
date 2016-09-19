@@ -385,6 +385,10 @@ audio { margin-top:10px; }
     background-repeat: repeat !important;
 }
 
+.page{
+    color: #333333 !important;
+}
+
 
 
 .grid-menu-item, .grid-menu-item1, .grid-menu-item.list__item { border:none!important; background-image:none; }
@@ -403,9 +407,9 @@ p{
     margin-bottom: 10px !important;
 }
 
-.my-content > p:last-child{
+/*.my-content > p:last-child{
     display: none !important;
-}
+}*/
 
 .my-content a{
     /*pointer-events: none !important;

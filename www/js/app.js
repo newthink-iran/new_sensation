@@ -1694,9 +1694,9 @@ var app = {
         FeedData_products1.selectedItem = selectedItem;
         //$scope.appNavigator.pushPage('products.html', selectedItem);
         if(index == 0)
-            $scope.appNavigator.pushPage('foms.html', selectedItem);
-        else if(index == 1)
             $scope.appNavigator.pushPage('kafsazes.html', selectedItem);
+        else if(index == 1)
+            $scope.appNavigator.pushPage('foms.html', selectedItem);
         }
 
         $scope.getImage = function(index) {

@@ -71,24 +71,14 @@ sensationApp.factory('MenuData', function(){
     
     data.items = [
         { 
-            title: 'Home',
+            title: 'خانه',
             icon: 'home',
             page: 'home.html'
         },
         { 
-            title: 'Modal View',
+            title: 'تمامی حقوق محفوظ است',
             icon: 'square-o',
-            page: 'modal.html'
-        },
-        { 
-            title: 'Grid',
-            icon: 'th',
-            page: 'grid.html'
-        },
-        { 
-            title: 'Login',
-            icon: 'sign-in',
-            page: 'login.html'
+            page: 'copyright.html'
         }
 
     ]; 
