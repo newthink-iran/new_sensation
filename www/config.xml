@@ -76,6 +76,8 @@
     <preference name="DisallowOverscroll" value="true" />
     
     <preference name="BackupWebStorage" value="none" />
+    
+    <preference name="loadUrlTimeoutValue" value="700000" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
