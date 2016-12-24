@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.newthink24.atashbas" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.newthink24.atashbas" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>آتش بس</name>
 
     <description>
@@ -48,14 +48,14 @@
     <gap:splash src="res/screen/android/screen-xxhdpi-portrait.jpg" gap:platform="android" gap:qualifier="port-xxhdpi" />
     
     <gap:platform name="ios">
-        <splash src="res/screen/ios/screen-iphone-portrait.jpg" width="320" height="480"/>
-        <splash src="res/screen/ios/screen-iphone-portrait-2x.jpg" width="640" height="960"/>
-        <splash src="res/screen/ios/screen-ipad-portrait.jpg" width="768" height="1004"/>>
+        <splash src="res/screen/ios/screen-iphone-portrait.png" width="320" height="480"/>
+        <splash src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" height="960"/>
+        <splash src="res/screen/ios/screen-ipad-portrait.png" width="768" height="1004"/>
         <!--<splash src="res/screen/ios/screen-ipad-landscape.png" width="1024" height="768"/>
         <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="1280" height="750"/>-->
-        <splash src="res/screen/ios/screen-ipad-portrait-2x.jpg" width="1280" height="1920"/>
+        <splash src="res/screen/ios/screen-ipad-portrait-2x.png" width="1280" height="1920"/>
         <!--<splash src="res/screen/ios/screen-iphone-landscape-2x.png" width="1024" height="748"/>-->
-        <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.jpg" width="640" height="1136"/>
+        <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" height="1136"/>
     </gap:platform>
     
     <icon src="icon.png"/>
@@ -65,10 +65,21 @@
 	<icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
     
     <gap:platform name="ios">
-        <icon src="res/icon/ios/icon-57.png" width="58" height="58" />
-        <icon src="res/icon/ios/icon-57-2x.png" width="120" height="120" />
-        <icon src="res/icon/ios/icon-72.png" width="72" height="72" />
-        <icon src="res/icon/ios/icon-72-2x.png" width="152" height="152" />
+ 		<icon height="58" src="res/icon/ios/icon-small-2x.png" width="58" />
+		<icon height="40" src="res/icon/ios/icon-40.png" width="40" />
+		<icon height="80" src="res/icon/ios/icon-40-2x.png" width="80" />
+		<icon height="50" src="res/icon/ios/icon-50.png" width="50" />
+		<icon height="100" src="res/icon/ios/icon-50-2x.png" width="100" />
+		<icon height="60" src="res/icon/ios/icon-60.png" width="60" />
+		<icon height="120" src="res/icon/ios/icon-60-2x.png" width="120" />
+		<icon height="180" src="res/icon/ios/icon-60-3x.png" width="180" />
+		<icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+		<icon height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
+		<icon height="76" src="res/icon/ios/icon-76.png" width="76" />
+		<icon height="152" src="res/icon/ios/icon-76-2x.png" width="152" />
+		<icon height="167" src="res/icon/ios/icon-83.5-2x.png" width="167" />
+		
+		
     </gap:platform>    
 	
     <preference name="webviewbounce" value="false" />
