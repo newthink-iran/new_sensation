@@ -400,7 +400,7 @@ sensationApp.factory('FeedPluginData', function(){
 // RSS Data: Mofid Feeds configuration
 sensationApp.factory('FeedData_mofid', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=10' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=10' };
     
     return data;
 });
@@ -408,7 +408,7 @@ sensationApp.factory('FeedData_mofid', function(){
 // RSS Data: khabar Feeds configuration
 sensationApp.factory('FeedData_akhbar', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=11' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=11' };
     
     return data;
 });
@@ -416,7 +416,7 @@ sensationApp.factory('FeedData_akhbar', function(){
 // RSS Data: Amozesh Feeds configuration
 sensationApp.factory('FeedData_amozesh', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=12' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=12' };
     
     return data;
 });
@@ -424,7 +424,7 @@ sensationApp.factory('FeedData_amozesh', function(){
 // RSS Data: Khadamat Feeds configuration
 sensationApp.factory('FeedData_khadamat', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=13' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=13' };
     
     return data;
 });
@@ -432,7 +432,7 @@ sensationApp.factory('FeedData_khadamat', function(){
 // RSS Data: Fom Feeds configuration
 sensationApp.factory('FeedData_fom', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=8' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=8' };
     
     return data;
 });
@@ -440,7 +440,7 @@ sensationApp.factory('FeedData_fom', function(){
 // RSS Data: Kafsaz Feeds configuration
 sensationApp.factory('FeedData_kafsaz', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=9' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=9' };
     
     return data;
 });
@@ -448,7 +448,7 @@ sensationApp.factory('FeedData_kafsaz', function(){
 // RSS Data: Products1 Feeds configuration
 sensationApp.factory('FeedData_products1', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=7' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=7' };
     
     return data;
 });
@@ -456,7 +456,7 @@ sensationApp.factory('FeedData_products1', function(){
 // RSS Data: Darbare Feeds configuration
 sensationApp.factory('FeedData_darbare', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=14' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=14' };
     
     return data;
 });
@@ -464,7 +464,7 @@ sensationApp.factory('FeedData_darbare', function(){
 // RSS Data: Gallery Feeds configuration
 sensationApp.factory('FeedData_gallery', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=15' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=15' };
     
     return data;
 });
@@ -472,7 +472,7 @@ sensationApp.factory('FeedData_gallery', function(){
 // RSS Data: Certs Feeds configuration
 sensationApp.factory('FeedData_certs', function(){
     
-    var data = { url: 'http://atashkar.newthink24.com/feed/?cat=17' };
+    var data = { url: 'http://atashbaspars.ir/feed/?cat=17' };
     
     return data;
 });
