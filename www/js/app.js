@@ -1723,22 +1723,22 @@ var app = {
             newURL = String(FeedData_darbare.url) + String("&t=") + String(randomNum);
             FeedData_darbare.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_darbare.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=14&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_darbare.get();
-                    $scope.title = $scope.data.feed.entries[0].title;
-                    $scope.description = $scope.data.feed.entries[0].content;
+                    $scope.title = $scope.data[0].title;
+                    $scope.description = $scope.data[0].content;
                     
                 } else {
-                    $scope.title = data.responseData.feed.entries[0].title;
-                    $scope.description = data.responseData.feed.entries[0].content;
+                    $scope.title = data[0].title;
+                    $scope.description = data[0].content;
                     // Save feeds to the local storage
                     //FeedStorage_darbare.clear();
-                    FeedStorage_darbare.save(data.responseData);
+                    FeedStorage_darbare.save(data.data);
                 }
 
             }).
@@ -1747,8 +1747,8 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_darbare.get();
-            $scope.title = $scope.data.feed.entries[0].title;
-            $scope.description = $scope.data.feed.entries[0].content;
+            $scope.title = $scope[0].title;
+            $scope.description = $scope.data[0].content;
             });
         }
         
@@ -1774,12 +1774,13 @@ var app = {
             newURL = String(FeedData_gallery.url) + String("&t=") + String(randomNum);
             FeedData_gallery.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_gallery.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=15&callback=JSON_CALLBACK' }).
             success(function(data, status, headers, config) {
-
+                console.log(data);
+                console.log(data[0].thumbnail);
                 if ($done) { $done(); }
-
-                if (!data.responseData) {
+                $scope.feeds=data;
+                /*if (!data.responseData) {
                     $scope.data = FeedStorage_gallery.get();
                     $scope.feeds = $scope.data.feed.entries;
                     
@@ -1788,15 +1789,15 @@ var app = {
                     // Save feeds to the local storage
                     //FeedStorage_gallery.clear();
                     FeedStorage_gallery.save(data.responseData);
-                }
+                }*/
 
             }).
             error(function(data, status, headers, config) {
 
             if ($done) { $done(); }
 
-            $scope.data = FeedStorage_gallery.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            //$scope.data = FeedStorage_gallery.get();
+            //$scope.feeds = $scope.data.feed.entries; 
             });
         }
         
@@ -1809,10 +1810,12 @@ var app = {
 
         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+        var content = imageSrc.substring(0,imageSrc.length-5);
+            console.log(content);
+//        var element = $('<div>').html(content);
+//        var source = element.find('img').attr("src");
+        return content;
         }
         
     });
