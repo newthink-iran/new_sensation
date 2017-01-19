@@ -1792,7 +1792,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_darbare.get();
-            $scope.title = $scope[0].title;
+            $scope.title = $scope.data[0].title;
             $scope.description = $scope.data[0].content;
             });
         }
