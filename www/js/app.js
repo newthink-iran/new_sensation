@@ -1738,7 +1738,7 @@ var app = {
                     $scope.description = data[0].content;
                     // Save feeds to the local storage
                     //FeedStorage_darbare.clear();
-                    FeedStorage_darbare.save(data.data);
+                    FeedStorage_darbare.save(data);
                 }
 
             }).
@@ -1779,25 +1779,25 @@ var app = {
                 console.log(data);
                 console.log(data[0].thumbnail);
                 if ($done) { $done(); }
-                $scope.feeds=data;
-                /*if (!data.responseData) {
+               
+               if (!data) {
                     $scope.data = FeedStorage_gallery.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_gallery.clear();
-                    FeedStorage_gallery.save(data.responseData);
-                }*/
+                    FeedStorage_gallery.save(data);
+                }
 
             }).
             error(function(data, status, headers, config) {
 
             if ($done) { $done(); }
 
-            //$scope.data = FeedStorage_gallery.get();
-            //$scope.feeds = $scope.data.feed.entries; 
+            $scope.data = FeedStorage_gallery.get();
+            $scope.feeds = $scope.data; 
             });
         }
         
