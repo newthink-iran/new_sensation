@@ -1188,20 +1188,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_mofid.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=10&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_mofid.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_mofid.save(data.responseData);
+                    FeedStorage_mofid.save(data);
                 }
 
             }).
@@ -1210,7 +1210,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_mofid.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1227,12 +1227,19 @@ var app = {
         $scope.appNavigator.pushPage('mofid.html', selectedItem);
         }
 
+       
         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
         
     });
@@ -1266,20 +1273,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_khadamat.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=13&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_khadamat.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_khadamat.save(data.responseData);
+                    FeedStorage_khadamat.save(data);
                 }
 
             }).
@@ -1288,7 +1295,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_khadamat.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1305,12 +1312,18 @@ var app = {
         $scope.appNavigator.pushPage('khadamat.html', selectedItem);
         }
 
-        $scope.getImage = function(index) {
+         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
         
     });
@@ -1344,20 +1357,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_amozesh.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=12&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_amozesh.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_amozesh.save(data.responseData);
+                    FeedStorage_amozesh.save(data);
                 }
 
             }).
@@ -1366,7 +1379,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_amozesh.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1383,12 +1396,18 @@ var app = {
         $scope.appNavigator.pushPage('amozesh.html', selectedItem);
         }
 
-        $scope.getImage = function(index) {
+      $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
         
     });
@@ -1422,20 +1441,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_akhbar.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=11&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_akhbar.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_akhbar.save(data.responseData);
+                    FeedStorage_akhbar.save(data);
                 }
 
             }).
@@ -1444,7 +1463,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_akhbar.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1463,10 +1482,16 @@ var app = {
 
         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+        {
+                return selectedItem.thumbnail;
+        }
+        
         }
         
     });
@@ -1500,20 +1525,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_fom.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=8&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_fom.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_fom.save(data.responseData);
+                    FeedStorage_fom.save(data);
                 }
 
             }).
@@ -1522,7 +1547,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_fom.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1541,10 +1566,16 @@ var app = {
 
         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
         
     });
@@ -1578,20 +1609,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_kafsaz.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=9&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_kafsaz.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_kafsaz.save(data.responseData);
+                    FeedStorage_kafsaz.save(data);
                 }
 
             }).
@@ -1600,7 +1631,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_kafsaz.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1617,14 +1648,20 @@ var app = {
         $scope.appNavigator.pushPage('kafsaz.html', selectedItem);
         }
 
-        $scope.getImage = function(index) {
+       $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
-        }
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
         
+        }
+     
     });
     
     // RSS: Fom Controller
@@ -1656,20 +1693,20 @@ var app = {
             newURL = String(FeedData_mofid.url) + String("&t=") + String(randomNum);
             FeedData_mofid.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_products1.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=7&callback=JSON_CALLBACK' }).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_products1.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     // Save feeds to the local storage
                     //FeedStorage_akhbar.clear();
-                    FeedStorage_products1.save(data.responseData);
+                    FeedStorage_products1.save(data);
                 }
 
             }).
@@ -1678,7 +1715,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_products1.get();
-            $scope.feeds = $scope.data.feed.entries; 
+            $scope.feeds = $scope.data; 
             });
         }
         
@@ -1699,13 +1736,20 @@ var app = {
             $scope.appNavigator.pushPage('foms.html', selectedItem);
         }
 
-        $scope.getImage = function(index) {
+         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
+       
         
     });
     
@@ -1738,6 +1782,7 @@ var app = {
                     $scope.description = data[0].content;
                     // Save feeds to the local storage
                     //FeedStorage_darbare.clear();
+                    $scope.feeds = data;
                     FeedStorage_darbare.save(data);
                 }
 
@@ -1810,12 +1855,16 @@ var app = {
 
         $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
+        if(selectedItem.thumbnail.includes(","))
+        {
             var imageSrc=selectedItem.thumbnail.split(",")[0];
-        var content = imageSrc.substring(0,imageSrc.length-5);
-            console.log(content);
-//        var element = $('<div>').html(content);
-//        var source = element.find('img').attr("src");
-        return content;
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
         
     });
@@ -1835,21 +1884,21 @@ var app = {
             newURL = String(FeedData_certs.url) + String("&t=") + String(randomNum);
             FeedData_certs.url = newURL;*/
 
-            $http({method: 'JSONP', url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(FeedData_certs.url)}).
+            $http({method: 'JSONP', url: 'http://www.atashbaspars.ir/feed/json/?cat=17&callback=JSON_CALLBACK'}).
             success(function(data, status, headers, config) {
 
                 if ($done) { $done(); }
 
-                if (!data.responseData) {
+                if (!data) {
                     $scope.data = FeedStorage_certs.get();
-                    $scope.feeds = $scope.data.feed.entries;
+                    $scope.feeds = $scope.data;
                     
                 } else {
-                    $scope.feeds = data.responseData.feed.entries;
+                    $scope.feeds = data;
                     
                     // Save feeds to the local storage
                     //FeedStorage_certs.clear();
-                    FeedStorage_certs.save(data.responseData);
+                    FeedStorage_certs.save(data);
                 }
 
             }).
@@ -1858,7 +1907,7 @@ var app = {
             if ($done) { $done(); }
 
             $scope.data = FeedStorage_certs.get();
-            $scope.feeds = $scope.data.feed.entries;
+            $scope.feeds = $scope.data;
             });
         }
         
@@ -1870,12 +1919,18 @@ var app = {
         };
         
 
-        $scope.getImage = function(index) {
+       $scope.getImage = function(index) {
         var selectedItem = $scope.feeds[index];
-        var content = selectedItem.content;
-        var element = $('<div>').html(content);
-        var source = element.find('img').attr("src");
-        return source;
+        if(selectedItem.thumbnail.includes(","))
+        {
+            var imageSrc=selectedItem.thumbnail.split(",")[0];
+            var content = imageSrc.substring(0,imageSrc.length-5);    
+            return content;
+        }else
+         {
+                return selectedItem.thumbnail;
+         }
+        
         }
 
     });
