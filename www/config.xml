@@ -18,6 +18,7 @@
     <plugin name="org.apache.cordova.splashscreen" spec="4.0.0" />
     <plugin name="org.apache.cordova.vibration" spec="2.1.2" />
     <gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
+	<plugin name="cordova-plugin-firebase" spec="0.1.19" />
 	
 	<access origin="*"/> <!-- allow all pages, use for development -->
 	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
