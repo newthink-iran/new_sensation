@@ -59,7 +59,7 @@ var app = {
         
         // Initialize Push Notifications
         // Uncomment the following initialization when you have made the appropriate configuration for iOS - http://goo.gl/YKQL8k and for Android - http://goo.gl/SPGWDJ
-        //app.initPushwoosh();
+       app.initPushwoosh();
         
     },
     // Update DOM on a Received Event
