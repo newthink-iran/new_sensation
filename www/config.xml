@@ -17,14 +17,12 @@
      <!--<plugin name="org.apache.cordova.inappbrowser" spec="1.5.0" />-->
     <plugin name="org.apache.cordova.splashscreen" spec="4.0.0" />
     <plugin name="org.apache.cordova.vibration" spec="2.1.2" />
-    <plugin name="com.pushwoosh.plugins.pushwoosh" source="pgb" />
+    <gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
 	
-	<access origin="*"/> <!-- allow all pages, use for development -->
-	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
-
     
     <content src="index.html" />
     <access origin="*" />
+	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
 	
 	<gap:platform name="android">
         <allow-intent href="market:*" />
