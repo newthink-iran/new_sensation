@@ -19,7 +19,7 @@
 
 function registerPushwooshAndroid() {
 
-	var pushNotification = window.plugins.pushNotification;
+	var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
     
     // Set push notifications handler
     document.addEventListener('push-notification',
